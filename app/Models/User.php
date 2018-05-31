@@ -14,6 +14,10 @@ class User extends Authenticatable
      *
      * @var array
      */
+    public function isAuthorOf($model)
+    {
+        return $this->id == $model->user_id;
+    }
     protected $fillable = [
         'name', 'email', 'password','introduction','avatar'
     ];

@@ -37,6 +37,7 @@ class TopicsController extends Controller
 	{
         $categories = Category::all();
         return view('topics.create_and_edit', compact('topic', 'categories'));
+
 	}
 
     public function store(TopicRequest $request, Topic $topic)
